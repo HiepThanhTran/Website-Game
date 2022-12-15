@@ -1,0 +1,43 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin desktop {
+   @media (max-width: #{$desktop-width}) {
+      @content;
+   }
+}
+
+.maintenance {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   display: none !important;
+   z-index: 9999;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   background: var(--bg-4);
+
+   &__container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 3rem;
+      padding: 36px;
+   }
+
+   &__heading {
+      color: var(--text-color-2);
+   }
+
+   &__desc {
+      color: var(--text-color-3);
+   }
+
+   @include desktop {
+      display: flex !important;
+   }
+}

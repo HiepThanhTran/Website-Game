@@ -1,0 +1,106 @@
+.clock__container {
+   position: absolute;
+   z-index: 1;
+   left: 50%;
+   top: 20%;
+   transform: translateX(-50%);
+}
+
+.digital {
+   padding: 20px 45px;
+   color: var(--text-color-1);
+   border-radius: 10px;
+   background: var(--bg-1);
+   box-shadow: 0 5px 25px var(--black-rgba-6);
+   user-select: none;
+   pointer-events: none;
+
+   &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      background: var(--glowing-color);
+      background-size: 200% 200%;
+      top: -5px;
+      right: -5px;
+      bottom: -5px;
+      left: -5px;
+      filter: blur(20px);
+      animation: changePosition 10s ease infinite;
+   }
+
+   &__time {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-hours,
+      &-dots,
+      &-minutes {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 0 10px;
+         font-weight: 600;
+         line-height: 125px;
+      }
+
+      &-hours,
+      &-minutes {
+         width: 125px;
+         font-size: 6.5em;
+      }
+
+      &-dots {
+         font-size: 5em;
+         color: var(--text-color-3);
+      }
+
+      &-hours {
+         @include textGradient(to top, #634dff, #5fd4ff);
+      }
+
+      &-minutes {
+         @include textGradient(to top, #ff5e9a, #ffb960);
+      }
+
+      .rightSide {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         margin-left: 10px;
+
+         &__period,
+         &__seconds {
+            font-size: 1.2em;
+            font-weight: 500;
+         }
+
+         &__period {
+            transform: translateY(-20px);
+            @include textGradient(to top, #f7b63f, #faf879);
+         }
+
+         &__seconds {
+            transform: translateY(16px);
+            @include textGradient(to top, #24ff6d, #2f93f1);
+         }
+      }
+   }
+
+   &__calendar {
+      display: flex;
+      justify-content: center;
+      font-size: 1.3em;
+      font-weight: 300;
+      margin-bottom: 5px;
+      @include textGradient(to top, #ae4af6, #ff98d1);
+
+      &-dayName,
+      &-dayNumber,
+      &-year {
+         margin-left: 8px;
+      }
+   }
+}

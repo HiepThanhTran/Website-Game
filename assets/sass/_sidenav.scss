@@ -1,0 +1,166 @@
+.mainbody {
+   transition: 0.5s;
+   &--pull-left {
+      margin-left: 80px;
+   }
+   &--pull-right {
+      margin-right: 80px;
+   }
+   &--pull-top {
+      margin-top: 80px;
+   }
+   &--pull-bottom {
+      margin-bottom: 80px;
+   }
+}
+.sidenav {
+   position: fixed;
+   z-index: 2;
+   transition: 0.5s;
+   overflow: hidden;
+   background: linear-gradient(var(--black-rgba-5), var(--black-rgba-5)),
+      linear-gradient(to left bottom, var(--primary) 0%, var(--primary-to) 100%);
+   &--pull-left {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 80px;
+   }
+   &--pull-right {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 80px;
+   }
+   &--pull-top {
+      left: 0;
+      top: 0;
+      right: 0;
+      height: 80px;
+   }
+   &--pull-bottom {
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 80px;
+   }
+
+   &__toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--text-color-2);
+      cursor: pointer;
+      &:hover {
+         @include hover(var(--color-1), var(--color-2));
+      }
+   }
+
+   &__user {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 8.3333%;
+      transition: 0.5s;
+      overflow: hidden;
+      background: var(--black-rgba-3);
+      &-avatar {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         width: 50px;
+         height: 50px;
+         margin-top: 50%;
+         transition: 0.5s;
+         img {
+            border-radius: 50%;
+         }
+      }
+      &-name {
+         font-family: 'Dancing Script', cursive;
+         color: var(--text-color-2);
+         font-size: 2rem;
+      }
+   }
+
+   &__menu {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      font-size: 1.2rem;
+      text-align: center;
+      user-select: none;
+      &-link {
+         display: flex;
+         align-items: center;
+         width: 100%;
+         padding: 32px;
+         &:hover {
+            @include hover(var(--color-1), var(--color-2));
+         }
+         span {
+            display: none;
+         }
+      }
+      &-icon-right {
+         display: none;
+      }
+   }
+}
+
+.mainbody {
+   &--push-left {
+      margin-left: 250px;
+   }
+   &--push-right {
+      margin-right: 250px;
+   }
+   &--push-top {
+      margin-top: 250px;
+   }
+   &--push-bottom {
+      margin-bottom: 250px;
+   }
+}
+.sidenav {
+   &--push-left,
+   &--push-right {
+      width: 250px;
+   }
+   &--push-top,
+   &--push-bottom {
+      height: 250px;
+   }
+}
+.sidenav--push-left,
+.sidenav--push-right {
+   .sidenav {
+      &__user {
+         height: 25%;
+         &-avatar {
+            margin-top: 0;
+            width: 100px;
+            height: 100px;
+         }
+      }
+      &__menu {
+         display: block;
+         &-link {
+            padding: 24px;
+            span {
+               display: block;
+               margin-left: 12px;
+            }
+         }
+         &-icon-right {
+            display: block;
+            margin-left: auto;
+         }
+      }
+   }
+}

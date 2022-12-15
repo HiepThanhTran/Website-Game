@@ -1,0 +1,79 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.alert {
+   position: fixed;
+   z-index: 2;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.5);
+   &--hidden {
+      display: none !important;
+   }
+}
+
+.alertbox {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   z-index: 3;
+   width: 30%;
+   height: 50%;
+   padding: 24px;
+   border-radius: 12px;
+   border: 2px solid transparent;
+   background: linear-gradient(#2d2f41 0 0) padding-box, linear-gradient(270deg, #5ebbff 0%, #a174ff 100%) border-box;
+   & > div + div {
+      margin-top: 24px;
+   }
+
+   &__icon {
+      font-size: 5rem;
+      color: #dae4f0;
+      &--empty {
+         animation: spin 8s ease infinite;
+      }
+   }
+
+   &__title,
+   &__text,
+   &__btn {
+      font-size: 1.2rem;
+      text-align: center;
+      color: #dae4f0;
+      span {
+         color: gold;
+      }
+   }
+
+   &__btn {
+      flex-direction: row !important;
+      .btn:hover {
+         color: #fff;
+         background: #2e4a8d;
+      }
+   }
+
+   &--congrats {
+      .alertbox__icon {
+         color: transparent;
+         background-clip: text;
+         background-image: linear-gradient(to bottom, #a174ff, #5ebbff);
+      }
+      .alertbox__title {
+         color: #52eeee;
+      }
+      .alertbox__text {
+         color: #dae4f0;
+      }
+   }
+}

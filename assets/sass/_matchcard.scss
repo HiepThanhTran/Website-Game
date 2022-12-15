@@ -1,0 +1,133 @@
+.matchcard {
+   position: relative;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+
+   &__cont {
+      display: none;
+   }
+
+   &__btn {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-top: 240px;
+
+      .btn:hover {
+         @include hover(var(--color-1), var(--color-3));
+      }
+   }
+
+   &__circle {
+      position: absolute;
+      z-index: -1;
+      width: 600px;
+      height: 600px;
+      box-shadow: inset 10px 25px 50px rgba(0, 0, 0, 0.1), 15px 25px 10px var(--black-rgba-1),
+         15px 20px 20px rgba(0, 0, 0, 0.05), inset -10px -10px 15px var(--white-rgba-1);
+
+      &::before,
+      &::after {
+         content: '';
+         position: absolute;
+         opacity: 0.8;
+         background: #fff;
+      }
+
+      &::before {
+         top: 160px;
+         left: 120px;
+         width: 40px;
+         height: 40px;
+         border-radius: 42% 58% 37% 63% / 40% 43% 57% 60%;
+      }
+
+      &::after {
+         top: 150px;
+         left: 180px;
+         width: 20px;
+         height: 20px;
+         border-radius: 57% 43% 37% 63% / 48% 37% 63% 52%;
+      }
+
+      &--middle {
+         border-radius: 51% 49% 39% 61% / 47% 29% 71% 53%;
+      }
+      &--top-left {
+         transform: scale(0.125) translate(-3600px, -2400px);
+         border-radius: 55% 45% 60% 40% / 47% 37% 63% 53%;
+      }
+      &--top-right {
+         transform: scale(0.125) translate(3000px, -2000px);
+         border-radius: 61% 39% 47% 53% / 41% 51% 49% 59%;
+      }
+      &--bottom-left {
+         transform: scale(0.25) translate(-2400px, 400px);
+         border-radius: 63% 37% 36% 64% / 55% 30% 70% 45%;
+      }
+      &--bottom-right {
+         transform: scale(0.5) translate(1160px, 360px);
+         border-radius: 69% 31% 40% 60% / 48% 58% 42% 52%;
+      }
+   }
+}
+
+.box__card {
+   display: none;
+   flex-wrap: wrap;
+   width: 768px;
+   height: 96%;
+   border-radius: 8px;
+   perspective: 5000px;
+   background: var(--bg-1);
+   box-shadow: 0 0 30px var(--black-rgba-3);
+
+   .card {
+      position: relative;
+      width: 176px;
+      height: 157px;
+      margin: 8px;
+      border-radius: 6px;
+      user-select: none;
+      background: var(--bg-2);
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      &--flip {
+         transform: rotateY(-180deg);
+      }
+      &--disabled {
+         pointer-events: none;
+      }
+
+      &:hover {
+         cursor: pointer;
+         box-shadow: 0 5px 25px var(--black-rgba-5);
+      }
+
+      &__front,
+      &__back {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         border-radius: 6px;
+         backface-visibility: hidden;
+      }
+
+      &__back {
+         background: #2e4a8d;
+         transform: rotateY(-180deg);
+         background-size: 100% 100%;
+         &--correct {
+            background: #13978b;
+            background-size: 100% 100%;
+         }
+         &--wrong {
+            background: #ff623d;
+            background-size: 100% 100%;
+            animation: shake 0.1s linear 8;
+         }
+      }
+   }
+}

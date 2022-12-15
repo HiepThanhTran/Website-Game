@@ -1,0 +1,328 @@
+@for $i from 1 through 12 {
+   $size: percentage($i / 12);
+
+   .col-#{$i} {
+      width: $size;
+   }
+
+   .row-#{$i} {
+      height: $size;
+   }
+}
+
+.row {
+   display: flex;
+}
+
+.body--scroll-hidden {
+   overflow: hidden;
+}
+
+.show {
+   display: flex !important;
+}
+
+.hidden {
+   display: none !important;
+}
+
+.disabled {
+   opacity: 0.5;
+   cursor: default;
+   pointer-events: none;
+}
+
+.fadeInRight {
+   animation: fadeInRight 0.5s both;
+}
+
+.fadeOutRight {
+   animation: fadeOutRight 0.25s both;
+}
+
+.loading {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   z-index: 9999;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   opacity: 1;
+   transition: 1s;
+   background: #191940;
+
+   &--hidden {
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   &__main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 368px;
+      height: 100vh;
+      position: relative;
+   }
+
+   &__balls {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      &-1 {
+         .loading__balls-ball {
+            &--1 {
+               left: 20px;
+               animation-delay: 0;
+            }
+
+            &--2 {
+               left: 100px;
+               animation-delay: 0.05s;
+            }
+
+            &--3 {
+               left: 180px;
+               animation-delay: 0.1s;
+            }
+
+            &--4 {
+               left: 260px;
+               animation-delay: 0.15s;
+            }
+         }
+      }
+
+      &-2 {
+         .loading__balls-ball {
+            &--1 {
+               left: 20px;
+               animation-delay: 2s;
+            }
+
+            &--2 {
+               left: 100px;
+               animation-delay: 2.05s;
+            }
+
+            &--3 {
+               left: 180px;
+               animation-delay: 2.1s;
+            }
+
+            &--4 {
+               left: 260px;
+               animation-delay: 2.15s;
+            }
+         }
+      }
+
+      &-ball {
+         position: absolute;
+         top: -50px;
+         width: 50px;
+         height: 50px;
+         background: peru;
+         border-radius: 50%;
+         margin: 0 20px;
+         animation: ball 4s infinite;
+
+         &--1 {
+            background: linear-gradient(to bottom, #ffe93e, #ff952a);
+         }
+
+         &--2 {
+            background: linear-gradient(to bottom, #ff009e, #ff0038);
+         }
+
+         &--3 {
+            background: linear-gradient(to bottom, #00f4fe, #00bdfb);
+         }
+
+         &--4 {
+            background: linear-gradient(to bottom, #fc00f9, #b500f9);
+         }
+      }
+   }
+}
+
+.backToTop {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   display: none;
+   bottom: 100px;
+   right: 36px;
+   width: 40px;
+   height: 40px;
+   z-index: 1;
+   border: none;
+   transition: 0.25s linear;
+   box-shadow: 0 0px 20px var(--primary);
+   border-radius: 60% 40% 64% 36%/40% 73% 27% 60%;
+   background: linear-gradient(325deg, var(--primary-to) 0, var(--primary) 55%, var(--primary-to) 90%);
+   background-size: 280% auto;
+
+   &--show {
+      opacity: 1;
+      transform: translateX(0);
+   }
+
+   &:hover {
+      cursor: pointer;
+      background-position: right top;
+      box-shadow: 0 0px 10px var(--primary), 0 0px 20px var(--primary), 0 0px 30px var(--primary),
+         0 0px 40px var(--primary), 0 0px 50px var(--primary);
+   }
+
+   i {
+      font-size: 1rem;
+      color: var(--text-color-3);
+   }
+}
+
+.overlay {
+   visibility: hidden;
+   position: fixed;
+   z-index: 2;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   opacity: 0;
+   transition: 0.5s;
+   background: var(--black-rgba-5);
+
+   &--show {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+
+.menuGame {
+   display: none;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   position: absolute;
+   z-index: 2;
+   top: 50%;
+   left: 50%;
+   width: 40%;
+   height: 60%;
+   border-radius: 12px;
+   border: 2px solid transparent;
+   background: var(--border-gradient);
+
+   &--fadeInT {
+      animation: fadeInUpT 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+   }
+
+   &--fadeOutT {
+      animation: fadeOutUpT 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+   }
+
+   &__heading {
+      text-transform: uppercase;
+      font-style: italic;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      @include textGradient(to bottom, var(--primary-to), var(--primary));
+   }
+
+   .btn {
+      font-size: 2rem;
+      font-weight: 600;
+
+      &:hover {
+         @include hover(var(--color-1), var(--color-3));
+      }
+   }
+}
+
+.panel {
+   display: none;
+   flex-direction: column;
+   justify-content: space-around;
+   position: absolute;
+   width: 300px;
+   height: 400px;
+   padding: 24px;
+   border-radius: 8px;
+   background: var(--bg-1);
+   box-shadow: 0 0 30px var(--black-rgba-3);
+
+   &--pull-top-right {
+      top: 16px;
+      right: 36px;
+   }
+
+   &__heading {
+      color: var(--text-color-2);
+      text-transform: capitalize;
+      text-align: center;
+      font-size: 1.2rem;
+   }
+
+   &__score {
+      text-align: center;
+      font-size: 1.4rem;
+      color: var(--text-color-3);
+
+      &>div+div {
+         margin-top: 24px;
+      }
+   }
+
+   &__controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-btn,
+      &-restart {
+         cursor: pointer;
+      }
+   }
+
+   &__stars {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: gold;
+
+      i+i {
+         margin-left: 8px;
+      }
+   }
+
+   &__times {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 16px;
+
+      &-dots {
+         margin: 0 8px;
+      }
+   }
+
+   &__btn {
+      margin-top: 52px;
+
+      .btn {
+         font-size: 1.4rem;
+
+         &:hover {
+            @include hover(var(--color-1), var(--color-3));
+         }
+      }
+   }
+}

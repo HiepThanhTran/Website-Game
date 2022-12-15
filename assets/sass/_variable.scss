@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+:root {
+   --primary: #5ebbff;
+   --primary-to: #a174ff;
+
+   --bg-1: #2d2f41;
+   --bg-2: #22242a;
+   --bg-3: #323c4a;
+   --bg-4: #32353b;
+   --bg-5: #34474c;
+   --bg-6: #323839;
+   --bg-7: #3b4554;
+   --bg-8: #272a31;
+
+   --color-1: #fff;
+   --color-2: #8860d04d;
+   --color-3: #2e4a8d;
+   --color-4: #7b78f8;
+   --color-5: #8ad3ff;
+
+   --text-color-1: #fff;
+   --text-color-2: #dae4f0;
+   --text-color-3: #ffffffb3;
+   --text-color-4: #52eeee;
+
+   --selection-color: #7b78f8;
+   --selection-bg-color: #8860d04d
+      /*rgba(123, 120, 248, 0.5)*/
+   ;
+   --info-color: #2f86eb;
+   --success-color: #47d864;
+   --warning-color: #ffc021;
+   --error-color: #ff623d;
+   --bg-color-input: #232e49;
+   --bg-error-color-input: #2c1d1b;
+   --bg-success-color-input: #0f290c;
+   --outline-color-input: #4ddaff;
+   --outline-error-color-input: #cc5140;
+   --outline-success-color-input: #48bd79;
+
+   --bg-gradient-1: linear-gradient(-45deg, var(--primary), var(--primary-to));
+   --bg-gradient-2: linear-gradient(to right top, #65dfc9, #6cdbeb);
+
+   --border-gradient: linear-gradient(var(--bg-1) 0 0) padding-box,
+      linear-gradient(270deg, var(--primary) 0%, var(--primary-to) 100%) border-box;
+   --black-rgba-1: rgba(0, 0, 0, 0.1);
+   --black-rgba-2: rgba(0, 0, 0, 0.2);
+   --black-rgba-3: rgba(0, 0, 0, 0.3);
+   --black-rgba-4: rgba(0, 0, 0, 0.4);
+   --black-rgba-5: rgba(0, 0, 0, 0.5);
+   --black-rgba-6: rgba(0, 0, 0, 0.6);
+   --black-rgba-7: rgba(0, 0, 0, 0.7);
+   --black-rgba-8: rgba(0, 0, 0, 0.8);
+   --black-rgba-9: rgba(0, 0, 0, 0.9);
+   --white-rgba-1: rgba(255, 255, 255, 0.1);
+   --white-rgba-2: rgba(255, 255, 255, 0.2);
+   --white-rgba-3: rgba(255, 255, 255, 0.3);
+   --white-rgba-4: rgba(255, 255, 255, 0.4);
+   --white-rgba-5: rgba(255, 255, 255, 0.5);
+   --white-rgba-6: rgba(255, 255, 255, 0.6);
+   --white-rgba-7: rgba(255, 255, 255, 0.7);
+   --white-rgba-8: rgba(255, 255, 255, 0.8);
+   --white-rgba-9: rgba(255, 255, 255, 0.9);
+   --glowing-color: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+
+   // background: linear-gradient(#00ccff, #d400d4);
+   // background: linear-gradient(141deg, #08a6d4, #cc1d89);
+   // background: linear-gradient(127deg, #be28db, #10aea5);
+   // background: linear-gradient(to left, #008aff, #00ffe7);
+   // background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+   // background: linear-gradient(45deg, #24ff6d, #2f93f1, #ff5e9a);
+   // background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
+   // background: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+   // background: linear-gradient(to right, #347d39, #316dca, #8256d0, #c93c37, #ae5622);
+   // background: linear-gradient(-225deg, #231557 0%, #44107a 29%, #ff1361 67%, #fff800 100%);
+   // background: linear-gradient(
+   //    100.73deg,
+   //    #beeef5 1.11%,
+   //    #bdaae1 33.86%,
+   //    #27a3d5 68.61%,
+   //    #f79bb9 97.83%
+   // );
+}
+
+@mixin textGradient($angle, $color1, $color2) {
+   color: transparent;
+   background-clip: text;
+   background-image: linear-gradient($angle, $color1, $color2);
+}
+
+@mixin hover($textColor: transparent, $bgColor: transparent) {
+   color: $textColor  !important;
+   background: $bgColor;
+}

@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--bg-2);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(-45deg, var(--primary) 0%, var(--primary-to) 100%);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(var(--black-rgba-3), var(--black-rgba-3)), linear-gradient(-45deg, var(--primary) 0%, var(--primary-to) 100%);
+}
+
+::-moz-selection {
+  color: var(--selection-color);
+  background: var(--selection-bg-color);
+}
+
+::selection {
+  color: var(--selection-color);
+  background: var(--selection-bg-color);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bg-1);
+}
+
+img {
+  max-width: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color-1);
+}

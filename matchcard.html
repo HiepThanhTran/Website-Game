@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Card Crew, Card Game">
+	<link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
+	<link rel="manifest" href="./assets/img/site.webmanifest">
+	<link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="./assets/css/reset.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href="./assets/css/alertbox.css">
+	<link rel="stylesheet" href="./assets/css/buttons.css">
+	<link rel="stylesheet" href="./assets/css/app.css">
+	<title>Matching Card | Card Crew</title>
+</head>
+
+<body>
+	<!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4l6J5jhRgos" frameborder="0"
+		allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+	<audio id="bg-music-sub" autoplay loop>
+		<source src="./assets/audio/bg-music-1.mp3" type="audio/mpeg">
+		<source src="./assets/audio/bg-music-2.mp3" type="audio/mpeg">
+		<source src="./assets/audio/bg-music-3.mp3" type="audio/mpeg">
+	</audio>
+
+	<div class="sidenav sidenav--pull-left">
+		<div class="sidenav__toggle row-1"><i class="fa-solid fa-bars"></i></div>
+		<div class="sidenav__user">
+			<!-- <i class="fa-regular fa-circle-user"></i> -->
+			<div class="sidenav__user-avatar"><img src="./assets/img/maryoku.png" alt="AVATAR"></div>
+			<a href="#" onclick="return false" class="sidenav__user-name">Maryoku</a>
+		</div>
+		<div class="sidenav__body row-8">
+			<ul class="sidenav__menu">
+				<li class="sidenav__menu-item">
+					<a href="./index.html" target="_blank" class="sidenav__menu-link">
+						<i class="fa-solid fa-house"></i>
+						<span>Home</span>
+					</a>
+				</li>
+				<li class="sidenav__menu-item">
+					<a href="#" onclick="return false" class="sidenav__menu-link">
+						<i class="fa-solid fa-store"></i>
+						<span>Marketplace</span>
+					</a>
+				</li>
+				<li class="sidenav__menu-item">
+					<a href="#" onclick="return false" class="sidenav__menu-link">
+						<i class="fa-solid fa-gamepad"></i>
+						<span>Games</span>
+						<i class="sidenav__menu-icon-right fa-solid fa-angle-right"></i>
+					</a>
+				</li>
+				<li class="sidenav__menu-item">
+					<a href="#" onclick="return false" class="sidenav__menu-link">
+						<i class="fa-solid fa-ranking-star"></i>
+						<span>News</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- style="background: url(./assets/img/hero-bg-2.svg) center center / cover no-repeat;" -->
+	<section class="matchcard">
+		<div class="matchcard__btn btns">
+			<div class="matchcard__cont btn">Continue</div>
+			<div class="matchcard__newGame btn">New game</div>
+		</div>
+
+		<div class="menuGame">
+			<div class="menuGame__heading">
+				<h2 class="menuGame__title">Matching Game</h2>
+			</div>
+			<div class="menuGame__btn btns">
+				<div class="start__game btn btn--size-s">Start game</div>
+				<div class="sett__game btn btn--size-s">Settings</div>
+				<div class="back__lobby btn btn--size-s">Back to lobby</div>
+			</div>
+		</div>
+
+		<div class="box__card"></div>
+		<div class="panel panel--pull-top-right">
+			<div class="panel__heading">
+				<h2 class="panel__title">Matching Game</h2>
+			</div>
+			<div class="panel__body">
+				<div class="panel__score">
+					<div class="panel__stars">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<div class="panel__controls">
+						<div class="panel__controls-btn"><i class="fa-regular fa-circle-play"></i></div>
+						<div class="panel__times">
+							<div class="panel__times-minutes">00</div>
+							<div class="panel__times-dots">:</div>
+							<div class="panel__times-seconds">00</div>
+						</div>
+						<div class="panel__controls-restart"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+					</div>
+					<div>Moves: <span class="panel__moves">00</span></div>
+				</div>
+				<div class="panel__btn btns">
+					<div class="back__lobby btn btn--size-s">Back to lobby</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="matchcard__circle matchcard__circle--middle"></div>
+		<div class="matchcard__circle matchcard__circle--top-left"></div>
+		<div class="matchcard__circle matchcard__circle--top-right"></div>
+		<div class="matchcard__circle matchcard__circle--bottom-left"></div>
+		<div class="matchcard__circle matchcard__circle--bottom-right"></div>
+	</section>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="./assets/javascript/digitalclock.js"></script>
+	<script src="./assets/javascript/alertbox.js"></script>
+	<script src="./assets/javascript/matchcard.js"></script>
+	<script src="./assets/javascript/main.js"></script>
+</body>
+
+</html>

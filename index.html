@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="keywords" content="Card Crew, Card Game" />
+      <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png" />
+      <link rel="manifest" href="./assets/img/site.webmanifest" />
+      <link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#ffffff" />
+      <link rel="stylesheet" href="./assets/css/reset.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      <link rel="stylesheet" href="./assets/css/toastmessage.css" />
+      <link rel="stylesheet" href="./assets/css/app.css" />
+      <title>Home | Card Crew</title>
+   </head>
+
+   <body>
+      <!--  -->
+      <header class="header">
+         <div class="header__left col-9">
+            <div class="header__logo">
+               <a href="./index.html"><img class="header__image" src="./assets/img/logo.png" alt="LOGO" /></a>
+            </div>
+            <ul class="header__nav">
+               <li class="header__nav-item">
+                  <a href="./index.html" class="header__nav-link header__nav-link--active">
+                     <span>Home</span>
+                  </a>
+               </li>
+               <li class="header__nav-item header__nav-item--hover">
+                  <a href="javascript:;" onclick="info();" class="header__nav-link">
+                     <span>Games<i class="fa-solid fa-caret-down"></i></span>
+                  </a>
+                  <ul class="header__nav-sub">
+                     <li class="header__nav-sub-item">
+                        <a href="./matchcard.html" target="_blank" class="header__nav-sub-link">
+                           <span>Matching Card</span>
+                        </a>
+                     </li>
+                     <li class="header__nav-sub-item">
+                        <a href="javascript:;" onclick="info();" class="header__nav-sub-link">
+                           <span>Tetris</span>
+                        </a>
+                     </li>
+                     <li class="header__nav-sub-item">
+                        <a href="javascript:;" onclick="info();" class="header__nav-sub-link">
+                           <span>Mario</span>
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="header__nav-item">
+                  <a href="javascript:;" class="header__nav-link">
+                     <span>Marketplace</span>
+                  </a>
+               </li>
+               <li class="header__nav-item">
+                  <a href="javascript:;" class="header__nav-link">
+                     <span>News</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="header__right col-3">
+            <div class="header__action">
+               <div class="header__action-container">
+                  <div class="header__ribbon-btn">
+                     <i class="fa-regular fa-bell" rel="0"></i>
+                  </div>
+                  <div class="header__ribbon">
+                     <div class="header__notification">
+                        <h3 class="header__notification-title">Notification</h3>
+                        <!-- <p class="header__notification-non">There are currently no notification</p> -->
+                        <ul class="header__notification-list">
+                           <li>
+                              <a href="javascript:;">There are currently no notification</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="header__action-container">
+                  <div class="header__ribbon-btn">
+                     <i class="fa-regular fa-circle-user" rel="1"></i>
+                  </div>
+                  <div class="header__ribbon">
+                     <div class="header__profile">
+                        <img src="./assets/img/maryoku.png" alt="AVATAR" />
+                        <div class="header__profile-detail">
+                           <a href="javascript:;">Maryoku</a>
+                           <p><span class="coin">0</span> Coin</p>
+                        </div>
+                     </div>
+                     <ul class="header__settings">
+                        <li>
+                           <a href="javascript:;">Accout settings</a>
+                        </li>
+                        <li><a href="javascript:;">Log out</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!---->
+      <section class="homepage">
+         <div class="homepage__heading col-12">
+            <div class="homepage__heading-glass"></div>
+
+            <div class="homepage__heading-circle-1"></div>
+            <div class="homepage__heading-circle-2"></div>
+         </div>
+
+         <div class="homepage__body"></div>
+      </section>
+
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+      <script
+         type="text/javascript"
+         src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      ></script>
+      <script src="./assets/javascript/toastmessage.js"></script>
+      <script src="./assets/javascript/alertbox.js"></script>
+      <script src="./assets/javascript/main.js"></script>
+   </body>
+</html>

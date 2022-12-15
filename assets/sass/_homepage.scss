@@ -1,0 +1,46 @@
+.homepage {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
+
+   &__heading {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(var(--black-rgba-4), var(--black-rgba-4)),
+         linear-gradient(to right top, #5ebbff, #a174ff);
+
+      &-glass {
+         min-height: 80vh;
+         z-index: 1;
+         width: 60%;
+         margin-top: 100px;
+         border-radius: 2rem;
+         background: linear-gradient(to right bottom, var(--white-rgba-3), var(--white-rgba-1));
+         backdrop-filter: blur(2rem);
+      }
+
+      &-circle-1,
+      &-circle-2 {
+         position: absolute;
+         width: 15rem;
+         height: 15rem;
+         background: linear-gradient(to right bottom, var(--white-rgba-8), var(--white-rgba-3));
+         border-radius: 50%;
+      }
+
+      &-circle-1 {
+         top: 5%;
+         right: 15%;
+      }
+
+      &-circle-2 {
+         bottom: 2%;
+         left: 10%;
+      }
+   }
+}
