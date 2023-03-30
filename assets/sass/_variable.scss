@@ -91,6 +91,6 @@
 }
 
 @mixin hover($textColor: transparent, $bgColor: transparent) {
-   color: $textColor  !important;
+   color: $textColor !important;
    background: $bgColor;
 }

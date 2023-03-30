@@ -41,8 +41,7 @@
   color: #dae4f0;
 }
 .alertbox__icon--empty {
-  -webkit-animation: spin 8s ease infinite;
-          animation: spin 8s ease infinite;
+  animation: spin 8s ease infinite;
 }
 .alertbox__title, .alertbox__text, .alertbox__btn {
   font-size: 1.2rem;

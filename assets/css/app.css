@@ -58,18 +58,6 @@
   --glowing-color: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 }
 
-@-webkit-keyframes changePosition {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @keyframes changePosition {
   0% {
     background-position: 0% 50%;
@@ -81,14 +69,6 @@
     background-position: 0% 50%;
   }
 }
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0);
@@ -97,25 +77,9 @@
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes spinMe {
-  100% {
-    transform: rotate(2turn);
-  }
-}
 @keyframes spinMe {
   100% {
     transform: rotate(2turn);
-  }
-}
-@-webkit-keyframes shake {
-  0%, 50%, 100% {
-    transform: rotateY(-180deg) translateX(0);
-  }
-  25% {
-    transform: rotateY(-180deg) translateX(4px);
-  }
-  71% {
-    transform: rotateY(-180deg) translateX(-4px);
   }
 }
 @keyframes shake {
@@ -129,16 +93,6 @@
     transform: rotateY(-180deg) translateX(-4px);
   }
 }
-@-webkit-keyframes showToast {
-  from {
-    opacity: 0;
-    transform: translateX(calc(100% + 12px));
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 @keyframes showToast {
   from {
     opacity: 0;
@@ -149,24 +103,9 @@
     transform: translateX(0);
   }
 }
-@-webkit-keyframes hiddenToast {
-  to {
-    opacity: 0;
-  }
-}
 @keyframes hiddenToast {
   to {
     opacity: 0;
-  }
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-    visibility: hidden;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
   }
 }
 @keyframes fadeIn {
@@ -179,16 +118,6 @@
     visibility: visible;
   }
 }
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -197,16 +126,6 @@
   to {
     opacity: 0;
     visibility: hidden;
-  }
-}
-@-webkit-keyframes fadeInUpT {
-  from {
-    opacity: 0;
-    transform: translate(-50%, 100%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
   }
 }
 @keyframes fadeInUpT {
@@ -219,16 +138,6 @@
     transform: translate(-50%, -50%);
   }
 }
-@-webkit-keyframes fadeOutUpT {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -200%);
-  }
-}
 @keyframes fadeOutUpT {
   from {
     opacity: 1;
@@ -237,16 +146,6 @@
   to {
     opacity: 0;
     transform: translate(-50%, -200%);
-  }
-}
-@-webkit-keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 @keyframes fadeInRight {
@@ -259,16 +158,6 @@
     transform: translateX(0);
   }
 }
-@-webkit-keyframes fadeOutRight {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-}
 @keyframes fadeOutRight {
   from {
     opacity: 1;
@@ -277,26 +166,6 @@
   to {
     opacity: 0;
     transform: translateX(100%);
-  }
-}
-@-webkit-keyframes ball {
-  0%, 25% {
-    top: -50px;
-  }
-  35% {
-    top: calc(60% - 50px);
-  }
-  40% {
-    top: calc(45% - 50px);
-  }
-  45% {
-    top: calc(55% - 50px);
-  }
-  50%, 70% {
-    top: calc(50% - 25px);
-  }
-  80%, 100% {
-    top: 100%;
   }
 }
 @keyframes ball {
@@ -438,13 +307,11 @@
 }
 
 .fadeInRight {
-  -webkit-animation: fadeInRight 0.5s both;
-          animation: fadeInRight 0.5s both;
+  animation: fadeInRight 0.5s both;
 }
 
 .fadeOutRight {
-  -webkit-animation: fadeOutRight 0.25s both;
-          animation: fadeOutRight 0.25s both;
+  animation: fadeOutRight 0.25s both;
 }
 
 .loading {
@@ -482,43 +349,35 @@
 }
 .loading__balls-1 .loading__balls-ball--1 {
   left: 20px;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
+  animation-delay: 0;
 }
 .loading__balls-1 .loading__balls-ball--2 {
   left: 100px;
-  -webkit-animation-delay: 0.05s;
-          animation-delay: 0.05s;
+  animation-delay: 0.05s;
 }
 .loading__balls-1 .loading__balls-ball--3 {
   left: 180px;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 .loading__balls-1 .loading__balls-ball--4 {
   left: 260px;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 .loading__balls-2 .loading__balls-ball--1 {
   left: 20px;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 .loading__balls-2 .loading__balls-ball--2 {
   left: 100px;
-  -webkit-animation-delay: 2.05s;
-          animation-delay: 2.05s;
+  animation-delay: 2.05s;
 }
 .loading__balls-2 .loading__balls-ball--3 {
   left: 180px;
-  -webkit-animation-delay: 2.1s;
-          animation-delay: 2.1s;
+  animation-delay: 2.1s;
 }
 .loading__balls-2 .loading__balls-ball--4 {
   left: 260px;
-  -webkit-animation-delay: 2.15s;
-          animation-delay: 2.15s;
+  animation-delay: 2.15s;
 }
 .loading__balls-ball {
   position: absolute;
@@ -528,8 +387,7 @@
   background: peru;
   border-radius: 50%;
   margin: 0 20px;
-  -webkit-animation: ball 4s infinite;
-          animation: ball 4s infinite;
+  animation: ball 4s infinite;
 }
 .loading__balls-ball--1 {
   background: linear-gradient(to bottom, #ffe93e, #ff952a);
@@ -609,12 +467,10 @@
   background: var(--border-gradient);
 }
 .menuGame--fadeInT {
-  -webkit-animation: fadeInUpT 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-          animation: fadeInUpT 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: fadeInUpT 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 .menuGame--fadeOutT {
-  -webkit-animation: fadeOutUpT 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-          animation: fadeOutUpT 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: fadeOutUpT 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 .menuGame__heading {
   text-transform: uppercase;
@@ -718,7 +574,6 @@
   box-shadow: 0 5px 25px var(--black-rgba-6);
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   pointer-events: none;
 }
@@ -733,8 +588,7 @@
   bottom: -5px;
   left: -5px;
   filter: blur(20px);
-  -webkit-animation: changePosition 10s ease infinite;
-          animation: changePosition 10s ease infinite;
+  animation: changePosition 10s ease infinite;
 }
 .digital__time {
   position: relative;
@@ -820,7 +674,6 @@
   height: 100px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   transition: 0.6s;
   font-size: 1.2rem;
@@ -891,7 +744,6 @@
   display: none;
   top: 64px;
   left: 0;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 20px;
@@ -1171,7 +1023,6 @@
   text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .sidenav__menu-link {
@@ -1325,7 +1176,6 @@
   border-radius: 6px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   background: var(--bg-2);
   transition: transform 0.6s;
@@ -1361,8 +1211,7 @@
 .box__card .card__back--wrong {
   background: #ff623d;
   background-size: 100% 100%;
-  -webkit-animation: shake 0.1s linear 8;
-          animation: shake 0.1s linear 8;
+  animation: shake 0.1s linear 8;
 }
 
 .maintenance {
