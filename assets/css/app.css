@@ -1196,8 +1196,7 @@
   width: 100%;
   height: 100%;
   border-radius: 6px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .box__card .card__back {
   background: #2e4a8d;
